@@ -1,12 +1,18 @@
 {
   "manifest_version": 2,
-  "name": "tool_name",
+  "name": "To-Do List",
   "version": "1.0",
-  "description": "our_description",
+  "description": "Allows you to create and keep track of different tasks on a to-do list. Whether that be manually adding tasks or adding the webpage that you're currently on as task with a hyperlink to that url, you'll never feel unorganized again!",
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js": ["./main.js"]
+      "js": ["main.js"]
     }
-  ]
+  ],
+  "background" : {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "btn.png"
+  }
 }
