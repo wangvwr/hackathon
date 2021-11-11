@@ -29,6 +29,8 @@ chrome.browserAction.onClicked.addListener(() => {
     button.addEventListener('click', addTask);
 
     function addTask() {
+      let items = newWindow.document.getElementsByClassName('toDoItems')
+      if (items.length >= 12) return;
 
       const checkBoxAndText = newWindow.document.createElement('div');
       checkBoxAndText.setAttribute('class', 'toDoItems')
